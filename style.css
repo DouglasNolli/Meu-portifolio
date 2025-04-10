@@ -1,0 +1,487 @@
+:root {
+    --cor-primaria: #222;
+    --cor-secundaria: #fff;
+    --cor-terciaria: #E7D400;
+    --cor-quaternaria: #000;
+    --cor-quinaria: #9b9b9b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+header {
+    background-color: var(--cor-quaternaria);
+    color: var(--cor-secundaria);
+    padding: 1.0rem 0;
+    width: 100vw;
+    z-index: 1000;
+    justify-items: end;
+    padding-right: 1rem;
+    display: grid;  
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+header a {
+    color: var(--cor-quaternaria);
+    text-decoration: none; 
+    font-size: 0.8rem;
+}
+
+header a:hover{
+    color: var(--cor-terciaria);
+}
+
+nav {
+    display: none;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+nav.ativo {
+
+}
+
+#bt_menu {
+  background-color: var(--cor-quaternaria);
+  border: none;
+  color: var(--cor-secundaria);
+  font-size: 1.rem;
+  cursor: pointer;
+}
+
+main {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-quaternaria);
+}
+
+.texto {
+    display: grid;
+    padding-top: 1rem;
+    font-size: 0.7rem;
+    width: 17rem;
+    line-height: 1.3rem;
+    text-align: justify;
+    hyphens: auto;
+    grid-row-start: 1;
+    grid-column-start: 1;
+}
+
+.inicio {
+    font-size: 1.18rem;
+}
+
+.subtitulo {
+    font-size: x-small;
+    margin-top: 0.5rem;
+    color: var(--cor-terciaria);
+}
+.menu_wrap {
+    display: grid;
+    justify-items: end;
+}
+
+#menu {
+    gap: 0.5rem;
+    padding-top: 0.5rem;
+    text-align: end;
+    position: absolute;
+    z-index: 999;
+}
+
+#menu.ativo {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 1.8rem;
+}
+
+.imagem_perfil {
+    width: 7rem;
+    height: 9rem;
+    display: grid;
+    grid-row-start: 1;
+    grid-column-start: 2;
+    border-radius: 0.8rem;
+    justify-self: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.nome {
+    display: grid; 
+    grid-column-start: 2; 
+    grid-row-start: 2; 
+    font-size: 0.5rem; 
+    text-align: center; 
+    justify-items: center; 
+    justify-self: center;
+}
+
+.nome1{
+    font-size: 0.7rem; 
+    color:var(--cor-quaternaria);
+    text-decoration:underline;
+}
+
+footer {
+    background-color: var(--cor-primaria);
+    font-size: 0.5rem;
+    color: var(--cor-secundaria);
+    padding: 0.3rem;
+    display: grid;
+    grid-row-start: 3fr;
+    text-align: center;
+}
+
+#texto_inicial {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    justify-items: start;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.icones {
+    display: grid;
+    width: 1.2rem;
+    grid-row-start: 2;
+    transition: transform ease 0.3s;
+    cursor: pointer;
+}
+
+.icones:hover {
+    transform: scale(1.3);
+}
+
+.icones_inicio {
+    display: grid;
+    grid-row: 2;
+    grid-auto-columns: auto;
+    column-gap: 0.5rem;
+}
+
+#projetos h2 {
+    font-size: 1.18rem;
+    color: var(--cor-terciaria);
+    text-decoration: underline;
+}   
+
+.faixa_detalhe {
+    background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgb(240, 240, 240) 30%,
+    rgb(240, 240, 240) 70%,
+    rgba(255, 255, 255, 0) 100%
+    );
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.carrossel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 70%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    scroll-behavior: smooth;
+    border-radius: 1rem;
+    margin-right: 0.5rem;
+}
+
+#projetos {
+    display: grid;
+    margin-left: 1rem;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.caixa_projetos {
+    background-color: var(--cor-secundaria);
+    border-radius: 16px;
+    overflow: hidden;
+    scroll-snap-align: start;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    border: 0.01rem solid;
+    padding: 0.5rem;
+    gap:1rem;
+}
+.titulo {
+    display: grid;
+    justify-items: center;
+}
+
+.descricao_projeto {
+    display: grid;
+    font-size: 0.7rem;
+    grid-row-start: 3;
+    text-align: justify;
+    z-index: 999;
+    height: 8rem;
+    hyphens: auto;
+}
+
+.carrossel_imagens {
+    display: flex;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 1rem;
+    scrollbar-width: none;
+}
+
+.imagens_projeto {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagens_projeto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.btn_carrossel {
+    background-color: var(--cor-secundaria);
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+    height: 100%;
+}
+
+.carrossel_container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.bt_ant_prox {
+    display: grid;
+}
+
+#curriculo h2 {
+    font-size: 1.18rem;
+    color: var(--cor-terciaria);
+    text-decoration: underline;
+}
+
+#curriculo {
+    display: grid;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.texto_curriculo {
+    font-size: 0.7rem;
+    text-align: justify;
+    hyphens: auto;
+    padding-right: 1rem;
+    line-height: 1.3rem;
+}
+
+.download {
+    font-size: 0.7rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.bt_curriculo {
+    background-color: #E7D400;
+    border-radius: 50%;
+    border: 0.05rem solid var(--cor-quaternaria);
+    display: grid;
+    grid-row-start: 4;
+    border-radius: 2rem;
+    width: 5rem;
+    height: 2rem;
+    align-items: center;
+    justify-self: center;
+    cursor: pointer;
+    animation: bolha 1.8s ease-in-out infinite;
+    transition: transform 0.3s ease;
+    margin-bottom: 4rem;
+}
+
+.botao-bolha:hover {
+    transform: scale(1.0);
+}
+
+@keyframes bolha {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+#contato {
+    display: grid;
+    background-color: var(--cor-quaternaria);
+    width: 100%;
+    height: max-content;
+    font-weight: bold;
+    color: var(--cor-secundaria);
+    gap: 1rem;
+    font-size: 0.7rem;
+    padding: 1rem;
+}
+
+.caixa_dialogo {
+    color: var(--cor-quinaria);
+    font-size: 0.7rem;
+    line-height: 1.7rem;
+    display: grid;
+}
+
+.icones_contato {
+    display: grid;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform ease 0.2s;
+    cursor: pointer;
+    transform-origin: center;
+    grid-row-start: 4;
+}
+
+.conteiner_icones {
+    display: flex;
+    flex-direction: column;
+}
+
+.icones_contato:hover {
+    transform: scale(1.1);
+}
+
+.icones2 {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/*configura a tela pra desktop*/
+@media (min-width: 768px) {
+   
+    body {
+        overflow-x: hidden;
+    }
+   
+    #menu {
+        display: flex !important;
+        flex-direction: row;
+        gap: 1rem;
+        position: static;
+    }
+
+    #bt_menu {
+        display: none;
+    }
+    
+    .menu_wrap {
+        margin-right: 1rem;
+        display: grid;
+    }
+
+    main {
+        margin-inline: 18rem;
+    }
+
+    header a {
+        color:var(--cor-secundaria);
+        font-size: 1.1rem;
+    }
+
+    #texto_inicial {
+        margin-top: 2rem;
+    }
+    .texto {
+        font-size: 1.2rem;
+        width: 29rem;
+        gap: 0.3rem;
+        line-height: 1.6;
+    }
+
+    .imagem_perfil {
+        width: 19rem;
+        height: 25rem;
+    }
+
+    .inicio {
+        font-size: 2rem;
+    }
+
+    .subtitulo {
+        font-size: 1rem;
+        margin-top: 0rem;
+    }
+
+    .icones {
+        width: 1.8rem;
+    }
+
+    .nome {
+        font-size: 0.7rem;
+    }
+
+    .nome1 {
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+
+    #projetos h2 {
+        font-size: 1.5rem;
+    }
+
+    .carrossel {
+        grid-auto-columns: 40%;
+    }
+
+    #curriculo h2 {
+        font-size: 1.5rem;
+    }
+
+    .texto_curriculo {
+        font-size: 1rem;
+        line-height: 1.6;
+        text-align: center;
+    }
+
+    .download {
+        font-size: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .bt_curriculo {
+        border-radius: 2rem;
+        width: 8rem;
+        height: 3rem;
+    }
+
+    #contato {
+        width: 100%;
+    }
+
+    .caixa_dialogo {
+        margin-left: 2rem;
+    }
+
+    footer {
+        font-size: 0.6rem;
+    }
+}   
