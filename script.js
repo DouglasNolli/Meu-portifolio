@@ -5,6 +5,12 @@ btMenu.addEventListener('click', () => {
   menu.classList.toggle('ativo');
 });
 
+window.addEventListener("scroll", () => {
+    if (menu.classList.contains('ativo')) {
+        menu.classList.remove("ativo");
+    }       
+});
+
 document.querySelectorAll('.carrossel_container').forEach(container => {
     const carrossel = container.querySelector('.carrossel_imagens');
     const btnProximo = container.querySelector('.btn_carrossel.proximo');
