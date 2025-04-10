@@ -19,5 +19,11 @@ document.querySelectorAll('.carrossel_container').forEach(container => {
     btnAnterior.addEventListener('click', () => {
         carrossel.scrollBy({ left: -larguraItem, behavior: 'smooth' });
     });
-    
 });
+
+function baixar_arquivo () {
+    const link = document.createElement('a')
+    link.href = "Currículo Atualizado.pdf";
+    link.download = "Curriculo-Douglas.pdf";
+    link.click()
+}
