@@ -33,3 +33,4 @@ function baixar_arquivo () {
     link.download = "Curriculo-Douglas.pdf";
     link.click()
 }
+

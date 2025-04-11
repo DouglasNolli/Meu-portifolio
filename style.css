@@ -1,9 +1,9 @@
 :root {
     --cor-primaria: #222;
     --cor-secundaria: #fff;
-    --cor-terciaria: #E7D400;
+    --cor-terciaria: #a70000;
     --cor-quaternaria: #000;
-    --cor-quinaria: #9b9b9b;
+    --cor-quinaria: #b7b7b7;
 }
 
 * {
@@ -109,11 +109,11 @@ main {
     height: 10rem;
     gap: 1.5rem;
     justify-content: center;
-    }
+}
 
 .imagem_perfil {
-    width: 7rem;
-    height: 9rem;
+    width: 6rem;
+    height: 8rem;
     display: grid;
     grid-row-start: 1;
     grid-column-start: 2;
@@ -180,19 +180,18 @@ footer {
     font-size: 1.18rem;
     color: var(--cor-terciaria);
     text-decoration: underline;
-}   
+} 
 
-.faixa_detalhe {
-    background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0) 0%,
-    rgb(240, 240, 240) 30%,
-    rgb(240, 240, 240) 70%,
-    rgba(255, 255, 255, 0) 100%
-    );
-    width: 100%;
-    display: flex;
-    justify-content: center;
+.bt_projeto {
+    display: none;
+}
+
+#bt_ant_muda_projeto {
+    display: none;
+}
+
+#bt_prox_muda_projeto {
+    display: none;
 }
 
 .carrossel {
@@ -310,33 +309,20 @@ footer {
 }
 
 .bt_curriculo {
-    background-color: #E7D400;
-    border-radius: 50%;
-    border: 0.05rem solid var(--cor-quaternaria);
+    background-color: var(--cor-quaternaria);
     display: grid;
     grid-row-start: 4;
-    border-radius: 2rem;
     width: 5rem;
     height: 2rem;
     align-items: center;
     justify-self: center;
     cursor: pointer;
-    animation: bolha 1.8s ease-in-out infinite;
-    transition: transform 0.3s ease;
     margin-bottom: 4rem;
+    color: var(--cor-secundaria);
 }
 
 .botao-bolha:hover {
     transform: scale(1.0);
-}
-
-@keyframes bolha {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
 }
 
 #contato {
@@ -455,8 +441,53 @@ footer {
         font-size: 1.5rem;
     }
 
+    .descricao_projeto {
+        font-size: 0.8rem;
+    }
     .carrossel {
         grid-auto-columns: 40%;
+    }
+
+    .bt_projeto {
+        display: flex;
+        justify-content: flex-end;
+        gap:0.5rem;
+    }
+
+    #bt_ant_muda_projeto {
+        background-color: var(--cor-secundaria);
+        border: none;
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow:0 5px 10px rgba(0, 0, 0, 0.2);
+        transition: all 0.2s ease-in-out;
+    }
+
+    #bt_ant_muda_projeto:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    #bt_prox_muda_projeto {
+        background-color: var(--cor-secundaria);
+        border: none;
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow:0 5px 10px rgba(0, 0, 0, 0.2);
+        transition: all 0.2s ease-in-out;
+    }
+
+    #bt_prox_muda_projeto:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     }
 
     #curriculo h2 {
@@ -476,7 +507,6 @@ footer {
     }
 
     .bt_curriculo {
-        border-radius: 2rem;
         width: 8rem;
         height: 3rem;
     }
